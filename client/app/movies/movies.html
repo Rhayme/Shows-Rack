@@ -1,0 +1,17 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="col-md-12">
+
+    <form ng-submit="saveMovie()">
+        <input class="form-control"type="text" placeholder="Title" ng-model="newMovie.title" />
+        <input class="form-control"type="text" placeholder="Genre" ng-model="newMovie.genre" />
+        <input class="form-control"type="text" placeholder="Description" ng-model="newMovie.description" />
+        <input class="form-control"type="text" placeholder="Rating" ng-model="newMovie.rating" />
+        <input class="form-control"type="text" placeholder="Year maked" ng-model="newMovie.yearmaked" />
+        <button type="submit" >Submit</button>
+
+    </form>
+    <div ng-repeat="movie in movies">
+        <h3>{{movie.title}}</h3>
+
+    </div>
+</div>

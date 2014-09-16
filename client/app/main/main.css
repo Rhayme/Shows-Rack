@@ -13,7 +13,9 @@
     letter-spacing: -1px;
 }
 
-.hero-unit {
+
+.movieTraillers
+ {
     position: relative;
     padding: 30px 15px;
     color: #F5F5F5;
@@ -28,3 +30,66 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+.traillers {
+    width:50%;
+    height:100%;
+    display: inline-block;
+    background:green;
+    text-align: center;
+    float: left;
+    border:  medium;
+    position:relative;
+    margin-left:10px;
+    margin-right:0px;
+    
+}
+
+.Hollywood {
+    width:45%;
+    height:100%;
+    display:block;
+    background:red;
+    text-align: center;
+    float:right;
+    position:relative;
+    margin-right:10px;
+    margin-left:0px;
+}
+
+body {
+    background-color: teal;
+}
+/*start of my movie css*/
+
+.container {
+    width: 100%px;
+    text-align: center;
+    background-color: antiquewhite;
+    padding:0px;
+   display:block;
+   position:relative;
+    top:20px;
+
+   }
+/*end of my movie css*/
+/*Beguins navbar*/
+.navbar {
+    background:black;
+    height:100px;
+    padding:45px;
+}
+.nav {
+    width:auto;
+    padding:10px 10px 10px 10px;
+    
+    height:70px;
+    text-align:center;
+
+}
+
+.navbar-brand {
+    float: right;
+
+}
+

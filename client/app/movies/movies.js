@@ -6,11 +6,7 @@ angular.module('showsRackApp')
       .state('movies', {
         url: '/movie',
         templateUrl: 'app/movies/movies.html',
-        controller: 'MoviesCtrl',
-        resolve: {
-            movieGetter: function (movieget) {
-                return movieget.getmovies();
-            }
-        }
+        controller: 'MoviesCtrl'
+        
       });
   });

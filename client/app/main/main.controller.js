@@ -24,4 +24,7 @@ angular.module('showsRackApp')
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');
     });
+
+
+
   });

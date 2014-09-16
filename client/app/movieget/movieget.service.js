@@ -2,6 +2,8 @@
 
 angular.module('showsRackApp')
   .service('movieget', function ($http, $q) {
+
+                
       return {
           getmovies: function () {
               var deferred = $q.defer();

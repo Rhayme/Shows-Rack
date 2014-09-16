@@ -1,0 +1,68 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class=" container">
+
+<div ng-controller="CarouselDemoCtrl" id="slides_control">
+    <div>
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}">
+                <div class="carousel-caption">
+                    <h4>Slide {{$index+1}}</h4>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="col-md-12">
+    <div ng-controller="CarouselDemoCtrl">
+        <div style="height: 305px">
+            <carousel interval="myInterval">
+                <slide ng-repeat="slide in movies" active="slide.active">
+                  <!--<img ng-src="{{slide.title}}" style="margin:auto;">--> 
+                   <!-- <h2>{{slide.title}}</h2> 
+                    <div class="carousel-caption">
+                        <h4>Slide {{$index}}</h4>
+                        <p>{{slide.description}}</p>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info" ng-click="addSlide()">+Movie</button>
+                <ul>
+                    <li ng-repeat="movies in movie"></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+               
+            </div>
+        </div>
+    </div>
+    <div>
+       
+
+    </div>
+
+</div>
+-->-->

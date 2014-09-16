@@ -18,4 +18,11 @@ describe('Controller: MoviesCtrl', function () {
   it('should ...', function () {
     expect(1).toEqual(1);
   });
+    /*Start corusel*/
+
+
+    //End corusel
+ 
+  
 });
+

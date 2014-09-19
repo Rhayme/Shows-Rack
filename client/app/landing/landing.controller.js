@@ -25,10 +25,5 @@ function CarouselDemoCtrl($scope) {
         $scope.addSlide();
     }
 
-    $scope.getPoster = function (thumbnail) {
-        return thumbnail.replace("_tmb", "_ori");
-
-
-    }
 }
 

@@ -1,7 +1,6 @@
 
 <div class="movieContainer" ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="container">
     <div class="MovieP">
 
         <form ng-submit="saveMovie()">
@@ -17,11 +16,20 @@
         <form ng-submit="searchmovies()">
             <input ng-submit="movie.posters.thumbnail" ng-model="movieName" />
             <button type="submit">search</button>
+
         </form>
+           <!--<div ng-repeat="movie in possibleMovies.movies"><img ng-click="selectMovie(movie)" ng-src="{{getPoster(movie.posters.original)}}" /></div>-->
+        <section class="moviesContainer">
+        <h2 style="color:white;">Results:</h2>
+            <div ng-click="selectMovie(movie)" class="possible-movies" ng-repeat="movie in possibleMovies.movies" style="background-image:url({{getPoster(movie.posters.original)}})">
+                <img ng-src="{{getPoster(movie.posters.original)}}" />
+                <h2 class="movietitles">{{movie.title}}</h2>
+                <h3 class="movietitles">{{movie.year}}</h3>
+            </div>
+        </section>
+        
+        </div>
 
-
-        <div ng-repeat="movie in possibleMovies.movies"><img ng-click="selectMovie(movie)" ng-src="{{getPoster(movie.posters.original)}}" /></div>
-
-    </div>
+        </div>
 
 </div>

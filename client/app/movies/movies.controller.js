@@ -31,6 +31,7 @@ angular.module('showsRackApp')
       }
       $scope.getPoster = function (thumbnail) {
           return thumbnail.replace("_tmb", "_ori");
+          
 
       }
       $scope.selectMovie = function (movie) {
@@ -39,11 +40,12 @@ angular.module('showsRackApp')
           $scope.newMovie.description = movie.synopsis;
           $scope.newMovie.rating = movie.ratings.audience_score;
           $scope.newMovie.link = movie.links.alternate;
-          $scope.newMovie.imageUrl = movie.posters.original;
+          $scope.newMovie.imageUrl = movie.posters.original.replace("_tmb", "_ori");
           
           console.dir(movie)
+          
       }
-      
+     
   });
 
 

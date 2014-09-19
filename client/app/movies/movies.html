@@ -2,27 +2,27 @@
 <div class="movieContainer" ng-include="'components/navbar/navbar.html'"></div>
 
 
-<div class="col-md-12">
+<div class="MovieP">
     
     <form ng-submit="saveMovie()">
-        <input class="form-control"type="text" placeholder="Title" ng-model="newMovie.title" />
-        <input class="form-control"type="text" placeholder="Genre" ng-model="newMovie.genre" />
+        <input class="form-control" type="text" placeholder="Title" ng-model="newMovie.title" />
+        <input class="form-control"type="text" placeholder="Link" ng-model="newMovie.link" />
+        <input class="form-control" type="text" placeholder="Image" ng-model="newMovie.imageUrl" />
         <input class="form-control"type="text" placeholder="Description" ng-model="newMovie.description" />
         <input class="form-control"type="text" placeholder="Rating" ng-model="newMovie.rating" />
-        <input class="form-control"type="text" placeholder="Year maked" ng-model="newMovie.yearmaked" />
+        <input class="form-control"type="text" placeholder="Year maked" ng-model="newMovie.yearmade" />
         <button type="submit" >Submit</button>
 
     </form>
    <!--<p> {{possibleMovies}}</p>--> 
+    <form ng-submit="searchmovies()">
+        <input ng-submit="movie.posters.thumbnail" ng-model="movieName" />
+<button type="submit">search</button>
+</form>
+    
+        
+        <div ng-repeat="movie in possibleMovies.movies"><img ng-click="selectMovie(movie)" ng-src="{{getPoster(movie.posters.original)}}" /></div>
 
-
-   
-    
-    <input ng-submit="movie.posters.thumbnail" ng-model="movieName" />
-    <button ng-click="searchmovies()">search</button>
-    <div ng-repeat="movie in possibleMovies.movies"><img ng-src="{{movie.posters.thumbnail}}"  /></div>
-    
-    
 </div>
- 
+
 

@@ -77,7 +77,7 @@ body {
 .navbar {
     background:black;
     height:100px;
-    padding:45px;
+    padding:4px;
 }
 .nav {
     width:auto;
@@ -90,6 +90,12 @@ body {
 
 .navbar-brand {
     float: right;
+   
+}
+.col-md-12 {
+    width:100%;
+    margin:20px;
+    position:relative;
 
 }
 

@@ -2,19 +2,18 @@
 
 angular.module('showsRackApp')
   .controller('MoviesCtrl', function ($scope, $http) {
-
+    
+      $scope.newMovie = {};
       $scope.saveMovie = function () {
           $http.post("/api/movies", $scope.newMovie)
             .success(function (response) {
-                $scope.movies.push(response);
+                alert("Movie was added")
+                $scope.newMovie = {};
                
             })
       };
       $scope.searchmovies = function () {
-          //$http.get('http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=' + $scope.movieName + //'&page_limit=10&page=1&apikey=bkxhfp5q5gehtezknjek5xer').success(function (res) {
-            //  $scope.possibleMovies = res.movies;
-          //})
-
+          
 
           $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/', {
               params: {
@@ -30,7 +29,20 @@ angular.module('showsRackApp')
 
         
       }
+      $scope.getPoster = function (thumbnail) {
+          return thumbnail.replace("_tmb", "_ori");
 
+      }
+      $scope.selectMovie = function (movie) {
+          $scope.newMovie.title = movie.title;
+          $scope.newMovie.yearmade = movie.year;
+          $scope.newMovie.description = movie.synopsis;
+          $scope.newMovie.rating = movie.ratings.audience_score;
+          $scope.newMovie.link = movie.links.alternate;
+          $scope.newMovie.imageUrl = movie.posters.original;
+          
+          console.dir(movie)
+      }
       
   });
 

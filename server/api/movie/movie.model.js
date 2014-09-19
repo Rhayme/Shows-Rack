@@ -5,10 +5,12 @@ var mongoose = require('mongoose'),
 
 var MovieSchema = new Schema({
   title: String,
-  genre: String,
   description: String,
   rating:Number,
-  yearmake:Number
+  yearmade: Number,
+  link: String,
+  imageUrl: String
+
 });
 
 module.exports = mongoose.model('Movie', MovieSchema);
